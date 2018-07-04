@@ -1,0 +1,18 @@
+<button class="btn btn-primary" (click)="addItem()">Display Details</button>
+<ul>
+    <!-- <li *ngFor = "let item of items; let i = index "
+    [ngClass]="(i>5) ? 'color-white' : ''"
+        [ngStyle]="i > 5 && { backgroundColor : 'blue' }"   >{{ item+' '+i }}
+
+    </li> -->
+    <!-- <li *ngFor = "let item of items; let i = index "
+    [ngClass]="{true:'color-white'}[i>5]"
+        [ngStyle]="i > 5 && { backgroundColor : 'blue' }"   >{{ item+' '+i }}
+
+    </li> -->
+    <li *ngFor = "let item of items; let i = index "
+        [ngClass]="{'color-white': i>5}"
+        [ngStyle]=" { backgroundColor : i > 5 ? 'blue':'transparent' }"   >{{ item+' '+i }}
+
+    </li>
+</ul>
