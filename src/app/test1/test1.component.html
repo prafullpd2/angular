@@ -1,0 +1,6 @@
+<div>
+    <input type="text" [(ngModel)]='username' class='margin-10' />
+    <button (click)="addUser(username)" class="btn btn-primary margin-10" [disabled]="!username">Add User</button>
+</div>
+<div class = 'user-list'>
+</div>
